@@ -33,4 +33,4 @@ pp.pprint(cars)
 electric_cars = [c for c in cars if 'Electric' in c['fuelType']]
 for car in electric_cars:
 	print("Fetching data via OnStar from %s %s %s:" % (car['year'], car['make'], car['model']))
-	pp.pprint(client.get_car_evstats(car['vin']))
+	pp.pprint(car.get_evstats())
